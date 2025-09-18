@@ -1,0 +1,20 @@
+.hero {
+  display: grid;
+  place-items: center;
+  min-height: 90vh;
+  background: linear-gradient(135deg, #f8d7e5, #ffe6f2);
+  text-align: center;
+  padding: 2rem;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+ 
+}
