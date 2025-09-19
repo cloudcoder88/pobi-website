@@ -27,7 +27,7 @@ export class ProductsComponent {
   },
 
    {
-    name: '',
+    name: 'Cerave Foaming Facial Cleanser',
     price:5000,
     rating:5,
     image:'assets/images/serum.jpg'
@@ -40,4 +40,12 @@ export class ProductsComponent {
     image:'assets/images/serum.jpg'
    },
    
-];}
+];
+
+addToCart(productName: string) {
+    console.log(`${productName} added to cart`);
+  }
+}
+
+
+
