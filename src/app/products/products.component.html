@@ -1,0 +1,15 @@
+<div class="products-grid">
+  <div class="product-card" *ngFor="let product of products">
+    <img [src]="product.image" [alt]="product.name" class="product-image" />
+    <h3>{{ product.name }}</h3>
+    <p>₦{{ product.price }}</p>
+
+    <!-- Ratings -->
+    <p>
+      <span *ngFor="let star of [].constructor(product.rating)">⭐</span>
+    </p>
+
+    <!-- Add to Cart Button,this place -->
+    <button (click)="addToCart(product)">Add to Cart</button>
+  </div>
+</div>
