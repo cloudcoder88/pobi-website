@@ -83,6 +83,15 @@ export class ProductsService {
       image:'assets/iamges/zinc.jpeg',
       description:'It  provide a combination of nutrients including zinc and Vitamins C, B-6, A, and E, specially blended for your skin.'
      },
+
+     {
+      id:9,
+      name:'MB Gold Creatine Monohydrate 300g',
+      price:55000,
+      rating:4,
+      image:'assets/images/creatine.jpeg',
+      description:'Muscle Builder Gold Creatine Monohydrate is a premium-grade creatine powder designed to enhance athletic performance, increase muscle mass, and accelerate recovery'
+     },
      
  ]};
 
