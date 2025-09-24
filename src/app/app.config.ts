@@ -1,8 +1,19 @@
-import { ApplicationConfig, provideZoneChangeDetection } from '@angular/core';
-import { provideRouter } from '@angular/router';
+import { ApplicationConfig } from '@angular/core';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { providePrimeNG } from 'primeng/config';
 
-import { routes } from './app.routes';
+// Pick your theme preset
+import Aura from '@primeng/themes/aura';
+// or import Lara from '@primeng/themes/lara';
+// or import Nora from '@primeng/themes/nora';
 
 export const appConfig: ApplicationConfig = {
-  providers: [provideZoneChangeDetection({ eventCoalescing: true }), provideRouter(routes)]
+  providers: [
+    provideAnimationsAsync(),
+    providePrimeNG({
+      theme: {
+        preset: Aura, // 👈 themes are applied here
+      },
+    }),
+  ],
 };
