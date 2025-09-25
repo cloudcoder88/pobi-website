@@ -1,4 +1,22 @@
 
+
+<!-- Sidebar with navigation -->
+<nav class="sidebar">
+  <ul>
+    <li><a routerLink="/home" routerLinkActive="active">Home</a></li>
+    <li><a routerLink="/about" routerLinkActive="active">About</a></li>
+    <li><a routerLink="/products" routerLinkActive="active">Products</a></li>
+    <li><a routerLink="/contact" routerLinkActive="active">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- Routed views render here -->
+<main class="content">
+  <router-outlet></router-outlet>
+</main>
+
+ 
+
 <router-outlet></router-outlet>
 
 

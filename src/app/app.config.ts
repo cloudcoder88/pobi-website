@@ -5,7 +5,7 @@ import Aura from  '@primeuix/themes/aura';
 // Pick your theme preset
 // or import Lara from '@primeng/themes/lara';
 // or import Nora from '@primeng/themes/nora';
-
+// or you can also import Aura here
 export const appConfig: ApplicationConfig = {
   providers: [
     provideAnimationsAsync(),
