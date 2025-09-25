@@ -1,7 +1,7 @@
 import { ApplicationConfig } from '@angular/core';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { providePrimeNG } from 'primeng/config';
-import Aura from  '@primeuix/themes/aura';
+import Lara from  '@primeuix/themes/lara';
 // Pick your theme preset
 // or import Lara from '@primeng/themes/lara';
 // or import Nora from '@primeng/themes/nora';
@@ -11,7 +11,7 @@ export const appConfig: ApplicationConfig = {
     provideAnimationsAsync(),
     providePrimeNG({
       theme: {
-        preset: Aura, // 👈 themes are applied here
+        preset: Lara, // 👈 themes are applied here
       },
     }),
   ],

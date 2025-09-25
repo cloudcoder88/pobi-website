@@ -1,36 +1,18 @@
+<!-- Sidebar -->
+<p-sidebar [(visible)]="sidebarVisible" [modal]="false" [dismissible]="false" [showCloseIcon]="false">
+  <div [ngClass]="{ 'collapsed': collapsed }" class="sidebar-content">
+    <h2 *ngIf="!collapsed" class="mb-3">Skincare</h2>
+    <p-menu [model]="items"></p-menu>
+  </div>
+</p-sidebar>
 
+<!-- Top bar -->
+<div class="topbar">
+  <button pButton icon="pi pi-bars" (click)="toggleSidebar()"></button>
+  <span class="ml-2 text-xl font-bold">Skincare Website</span>
+</div>
 
-<!-- Sidebar with navigation -->
-<nav class="sidebar">
-  <ul>
-    <li><a routerLink="/home" routerLinkActive="active">Home</a></li>
-    <li><a routerLink="/about" routerLinkActive="active">About</a></li>
-    <li><a routerLink="/products" routerLinkActive="active">Products</a></li>
-    <li><a routerLink="/contact" routerLinkActive="active">Contact</a></li>
-  </ul>
-</nav>
-
-<!-- Routed views render here -->
-<main class="content">
+<!-- Routed content -->
+<main class="p-4">
   <router-outlet></router-outlet>
 </main>
-
- 
-
-<router-outlet></router-outlet>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -1,12 +1,30 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { SidebarModule } from 'primeng/sidebar';
+import { ButtonModule } from 'primeng/button';
+import { MenuModule } from 'primeng/menu';
+import { RouterModule } from '@angular/router';
+import { MenuItem } from 'primeng/api';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  standalone: true,
+  imports: [SidebarModule, ButtonModule, MenuModule, RouterModule,CommonModule],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'skincare-project';
+  sidebarVisible: boolean = true;
+  collapsed: boolean = false;
+
+  items: MenuItem[] = [
+    { label: 'Home', icon: 'pi pi-home', routerLink: '/home' },
+    { label: 'About', icon: 'pi pi-info-circle', routerLink: '/about' },
+    { label: 'Products', icon: 'pi pi-shopping-bag', routerLink: '/products' },
+    { label: 'Contact', icon: 'pi pi-envelope', routerLink: '/contact' }
+  ];
+
+  toggleSidebar() {
+    this.collapsed = !this.collapsed;
+  }
 }
