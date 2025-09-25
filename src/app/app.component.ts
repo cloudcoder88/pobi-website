@@ -1,30 +1,29 @@
+
 import { Component } from '@angular/core';
-import { SidebarModule } from 'primeng/sidebar';
-import { ButtonModule } from 'primeng/button';
-import { MenuModule } from 'primeng/menu';
-import { RouterModule } from '@angular/router';
-import { MenuItem } from 'primeng/api';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
+import { MatListModule } from '@angular/material/list';
+import { MatButtonModule } from '@angular/material/button';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [SidebarModule, ButtonModule, MenuModule, RouterModule,CommonModule],
+  imports: [
+    CommonModule,
+    RouterModule,
+    MatSidenavModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatListModule,
+    MatButtonModule
+  ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  sidebarVisible: boolean = true;
-  collapsed: boolean = false;
-
-  items: MenuItem[] = [
-    { label: 'Home', icon: 'pi pi-home', routerLink: '/home' },
-    { label: 'About', icon: 'pi pi-info-circle', routerLink: '/about' },
-    { label: 'Products', icon: 'pi pi-shopping-bag', routerLink: '/products' },
-    { label: 'Contact', icon: 'pi pi-envelope', routerLink: '/contact' }
-  ];
-
-  toggleSidebar() {
-    this.collapsed = !this.collapsed;
-  }
+  opened = true;                
+  toggle() { this.opened = !this.opened; }
 }

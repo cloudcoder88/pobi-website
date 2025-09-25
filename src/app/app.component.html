@@ -1,18 +1,36 @@
-<!-- Sidebar -->
-<p-sidebar [(visible)]="sidebarVisible" [modal]="false" [dismissible]="false" [showCloseIcon]="false">
-  <div [ngClass]="{ 'collapsed': collapsed }" class="sidebar-content">
-    <h2 *ngIf="!collapsed" class="mb-3">Skincare</h2>
-    <p-menu [model]="items"></p-menu>
-  </div>
-</p-sidebar>
+<!-- src/app/app.component.html -->
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer mode="side" [(opened)]="opened" class="app-sidenav">
+    <mat-nav-list>
+      <a mat-list-item routerLink="/home" routerLinkActive="active" (click)="opened = false">
+        <mat-icon>home</mat-icon>
+        <span class="link-text">Home</span>
+      </a>
+      <a mat-list-item routerLink="/products" routerLinkActive="active" (click)="opened = false">
+        <mat-icon>shopping_bag</mat-icon>
+        <span class="link-text">Products</span>
+      </a>
+      <a mat-list-item routerLink="/about" routerLinkActive="active" (click)="opened = false">
+        <mat-icon>info</mat-icon>
+        <span class="link-text">About</span>
+      </a>
+      <a mat-list-item routerLink="/contact" routerLinkActive="active" (click)="opened = false">
+        <mat-icon>mail</mat-icon>
+        <span class="link-text">Contact</span>
+      </a>
+    </mat-nav-list>
+  </mat-sidenav>
 
-<!-- Top bar -->
-<div class="topbar">
-  <button pButton icon="pi pi-bars" (click)="toggleSidebar()"></button>
-  <span class="ml-2 text-xl font-bold">Skincare Website</span>
-</div>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary" class="topbar">
+      <button mat-icon-button (click)="toggle()" aria-label="Toggle menu">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <span class="toolbar-title">Skincare Website</span>
+    </mat-toolbar>
 
-<!-- Routed content -->
-<main class="p-4">
-  <router-outlet></router-outlet>
-</main>
+    <div class="content">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
