@@ -1,5 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
-/* use prebuilt pink/bluegrey theme for quick styling */
+
+/* i used the  prebuilt pink/bluegrey theme for quick styling */
 @import "@angular/material/prebuilt-themes/pink-bluegrey.css";
 
 @import "primeicons/primeicons.css";
