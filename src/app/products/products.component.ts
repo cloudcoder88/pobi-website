@@ -35,7 +35,7 @@ export class ProductsComponent {
   ];
 
   first: number = 0;
-  rows: number = 4;
+  rows: number = 6; // ✅ show 6 products per page
 
   constructor(private cartService: CartService, private dialog: MatDialog) {}
 
