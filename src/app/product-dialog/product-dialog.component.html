@@ -1,1 +1,13 @@
-<p>product-dialog works!</p>
+<h2 mat-dialog-title>{{ data.name }}</h2>
+<mat-dialog-content>
+  <img [src]="data.image" alt="{{ data.name }}" style="width: 100%; border-radius: 8px;" />
+  <p>{{ data.description }}</p>
+  <p><strong>Price:</strong> ₦{{ data.price }}</p>
+  
+  <p-rating [(ngModel)]="data.rating" [readonly]="true"></p-rating>
+
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Close</button>
+</mat-dialog-actions>
