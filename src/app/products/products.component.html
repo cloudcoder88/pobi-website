@@ -7,26 +7,6 @@
       <!-- In PrimeNG v19, the <p-rating> component does not have [cancel] or [cancelVisible]. That’s why Angular keeps saying “not a known property
         this is the correct import,remember to import the RatingModule in your app.module.ts file-->
       <p-rating [(ngModel)]="product.rating" [readonly]="true"></p-rating>
-
-    </mat-card-content>
-    <button mat-raised-button color="primary" (click)="addToCart(product); $event.stopPropagation()">Add to Cart</button>
-  </mat-card>
-</div>
-
-<p-paginator 
-  [rows]="rows" 
-  [totalRecords]="products.length" 
-  (onPageChange)="onPageChange($event)">
-</p-paginator>
-<div class="products-grid">
-  <mat-card *ngFor="let product of products | slice:first:(first+rows)" (click)="openDialog(product)">
-    <img mat-card-image [src]="product.image" [alt]="product.name" />
-    <mat-card-content>
-      <h3>{{ product.name }}</h3>
-      <p>₦{{ product.price }}</p>
-    
-      <p-rating [(ngModel)]="product.rating" [readonly]="true"></p-rating>
-
     </mat-card-content>
     <button mat-raised-button color="primary" (click)="addToCart(product); $event.stopPropagation()">Add to Cart</button>
   </mat-card>

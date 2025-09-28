@@ -1,13 +1,26 @@
 .products-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 20px;
-  margin: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 16px;
 }
+
 mat-card {
-  cursor: pointer;
-  transition: transform 0.2s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;            /*  this command stretch cards equally */
+  background: #2e2e2e;     /*  it causes consistent dark background */
+  color: white;
 }
-mat-card:hover {
-  transform: scale(1.02);
+
+mat-card img {
+  height: 250px;           /* it forces images to remain at the same size */
+  object-fit: contain;     /*  it prevents image distortion */
+  background: white;       /*  it provides a white background for product images */
+  border-radius: 8px;
+}
+
+mat-card-content {
+  flex-grow: 1;   
+
 }
