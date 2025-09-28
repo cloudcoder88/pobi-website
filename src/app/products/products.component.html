@@ -1,22 +1,10 @@
-<div class="product-list">
-  <div
-    class="product-card"
-    *ngFor="let product of products | slice:first:(first + rows)"
-  >
-    <img [src]="product.image" [alt]="product.name" />
-    <h3>{{ product.name }}</h3>
-    <p>₦{{ product.price }}</p>
-
-    <!-- Fixed: no [cancel] -->
-    <p-rating [(ngModel)]="product.rating" [readonly]="true"></p-rating>
-
-    <button (click)="addToCart(product)">Add to Cart</button>
-  </div>
+<div class="products-grid">
+  <mat-card *ngFor="let product of products" class="product-card">
+    <mat-card-header>
+      <mat-card-title>{{ product.name }}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <p>{{ product.description }}</p>
+    </mat-card-content>
+  </mat-card>
 </div>
-
-<p-paginator
-  [first]="first"
-  [rows]="rows"
-  [totalRecords]="products.length"
-  (onPageChange)="onPageChange($event)"
-></p-paginator>

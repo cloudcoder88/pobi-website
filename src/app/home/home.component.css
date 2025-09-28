@@ -1,20 +1,15 @@
-.hero {
+.products-grid {
   display: grid;
-  place-items: center;
-  min-height: 90vh;
-  background: linear-gradient(135deg, #f8d7e5, #ffe6f2);
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
+  justify-content: space-between;
+  padding: 16px;
+}
+
+.product-card {
+  height: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   text-align: center;
-  padding: 2rem;
-}
-
-.hero h1 {
-  font-size: 3rem;
-  color: #333;
-  margin-bottom: 1rem;
-}
-
-.hero p {
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
- 
 }
