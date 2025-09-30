@@ -92,6 +92,61 @@ export class ProductsService {
       image:'assets/images/creatine.jpeg',
       description:'Muscle Builder Gold Creatine Monohydrate is a premium-grade creatine powder designed to enhance athletic performance, increase muscle mass, and accelerate recovery'
      },
+
+     {
+      id:10,
+      name:'Prequel Skin Multi-Acid Milk AHA Peel',
+      price:48000,
+      rating:5,
+      image:'assets/images/milk AHA peel.jpeg',
+      description:'Prequel Skin Multi-Acid Milk AHA Peel is a dermatologist-formulated, milky resurfacing treatment that delivers advanced exfoliation without compromising your skin barrier'
+     },
+
+  
+        {
+      id:11,
+      name:'Anua Azelaic 10 Hyaluron Redness Soothing Pad',
+      price:26000,
+      rating:4,
+      image:'https://anua.global/cdn/shop/files/anua-us-toner-90-ea-azelaic-10-hyaluron-redness-soothing-pad-1170826118.png?v=1748645013&width=1000',
+      description:'This toner pad is suitable for sensitive skin, formulated with soothing and hydrating ingredients that help improve the appearance of redness and visibly troubled areas.'
+     },
+
+        {
+      id:12,
+      name:'La Roche-Posay Toleriane Hydrating Gentle Cleanser 200ml',
+      price:31000,
+      rating:5,
+      image:'https://essentialshub.com/wp-content/uploads/2023/11/IMG_4175.webp',
+      description:' Toleriane Hydrating Gentle Cleanser is a daily face wash for normal to dry, sensitive skin.'
+     },
+
+        {
+      id:13,
+      name:'Phlur Mrs Smith Hair & Body Fragrance Mist 90ml',
+      price:49000,
+      rating:5,
+      image:'https://essentialshub.com/wp-content/uploads/2025/09/IMG_3751.jpeg',
+      description:'A luxurious hair and body mist that envelops you in a warm, inviting scent.'
+     },
+
+        {
+      id:14,
+      name:'Romano Force Romano Body Spray',
+      price:7000,
+      rating:4,
+      image:'https://romanoformen.com/media/cznfoh1w/force-bodyspray-150.png',
+      description:'Provides long-lasting fragrance to keep the body refreshed and comfortable.'
+     },
+
+        {
+      id:15,
+      name:'CosRx The Alpha Arbutin Discoloration Care Hydrogel Sheet Mask',
+      price:7000,
+      rating:5,
+      image:'',
+      description:''
+     },
      
  ]};
 

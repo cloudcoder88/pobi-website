@@ -31,11 +31,15 @@ export class ProductsComponent {
     { name: 'Kirkland Minoxidil For Hair', price: 9000, rating: 5, image: 'https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/73/6829483/1.jpg?1317', description:'A topical solution for hair regrowth in men.' },
     { name: 'Kirkland Minoxidil + Dermaroller', price: 9400, rating: 5, image: 'https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/35/9336814/1.jpg?5468', description:'A complete hair regrowth kit with minoxidil and a dermaroller.' },
     { name: 'Miracle Compression Socks', price: 9400, rating: 4, image: 'https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/90/4955732/1.jpg?0668', description:'Compression socks designed to improve circulation and reduce fatigue.' },
-    { name: 'Puritans Pride Zinc', price: 16000, rating: 4, image: 'https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/25/4595311/1.jpg?2492', description:'Zinc supplements to support immune health and overall wellness.' }
-  ];
+    { name: 'Puritans Pride Zinc', price: 16000, rating: 4, image: 'https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/25/4595311/1.jpg?2492', description:'Zinc supplements to support immune health and overall wellness.' },
+    { name:'MB Gold Creatine Monohydrate 300g',price:55000,rating:4,image:'https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/87/8881704/1.jpg?3486',description:'Muscle Builder Gold Creatine Monohydrate is a premium-grade creatine powder designed to enhance athletic performance, increase muscle mass, and accelerate recovery'},
+    { name:'Prequel Skin Multi-Acid Milk AHA Peel',price:48000,rating:5,image:'https://prequelskin.com/cdn/shop/files/1-PRQL_PDP_Product_Multi-AcidMilk_072025_CapOn.jpg?v=1753227404&width=3000',description:'Prequel Skin Multi-Acid Milk AHA Peel is a dermatologist-formulated, milky resurfacing treatment that delivers advanced exfoliation without compromising your skin barrier'},
+    { name:'La Roche-Posay Toleriane Hydrating Gentle Cleanser 200ml', price:31000,rating:5, image:'https://essentialshub.com/wp-content/uploads/2023/11/IMG_4175.webp', description:' Toleriane Hydrating Gentle Cleanser is a daily face wash for normal to dry, sensitive skin.'},
+    { name:'Anua Azelaic 10 Hyaluron Redness Soothing Pad', price:26000,rating:5,image:'https://anua.global/cdn/shop/files/anua-us-toner-90-ea-azelaic-10-hyaluron-redness-soothing-pad-1170826118.png?v=1748645013&width=1000',description:'This toner pad is suitable for sensitive skin, formulated with soothing and hydrating ingredients that help improve the appearance of redness and visibly troubled areas.'},
+    ];
 
   first: number = 0;
-  rows: number = 6; // default, will adjust by screen size
+  rows: number = 6; // default, it will adjust by screen size
 
   constructor(private cartService: CartService, private dialog: MatDialog) {
     this.setRowsBasedOnScreen();
