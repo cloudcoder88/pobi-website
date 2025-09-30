@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms'; 
 import { RatingModule } from 'primeng/rating';
@@ -35,9 +35,24 @@ export class ProductsComponent {
   ];
 
   first: number = 0;
-  rows: number = 6; // ✅ show 6 products per page
+  rows: number = 6; // default, will adjust by screen size
 
-  constructor(private cartService: CartService, private dialog: MatDialog) {}
+  constructor(private cartService: CartService, private dialog: MatDialog) {
+    this.setRowsBasedOnScreen();
+  }
+
+  @HostListener('window:resize', [])
+  onResize() {
+    this.setRowsBasedOnScreen();
+  }
+
+  setRowsBasedOnScreen() {
+    if (window.innerWidth >= 992) {
+      this.rows = 8;  // Desktop → 8 (4×2 grid)
+    } else {
+      this.rows = 6;  // Mobile/tablet → 6 (2×3 grid)
+    }
+  }
 
   addToCart(product: any) {
     this.cartService.addToCart(product);
