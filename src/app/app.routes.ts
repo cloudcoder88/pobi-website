@@ -3,13 +3,13 @@ import { HomeComponent } from './home/home.component';
 import { ProductsComponent } from './products/products.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
-
-
+import { ReviewsComponent } from './reviews/reviews.component';
 
 export const routes: Routes = [
-  { path: '', redirectTo: '/home', pathMatch:  'full' },
-  { path: 'home', component: HomeComponent },
+  { path: '', component: HomeComponent },          // Home
   { path: 'products', component: ProductsComponent },
   { path: 'about', component: AboutComponent },
-  { path: 'contact', component: ContactComponent }
+  { path: 'contact', component: ContactComponent },
+  { path: 'reviews', component: ReviewsComponent }, 
+  { path: '**', redirectTo: '' } // fallback
 ];

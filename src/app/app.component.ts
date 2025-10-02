@@ -1,12 +1,12 @@
-
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
-import { MatListModule } from '@angular/material/list';
 import { MatButtonModule } from '@angular/material/button';
+
+// 👇 ADD THIS
+import { SidebarModule } from 'primeng/sidebar';
 
 @Component({
   selector: 'app-root',
@@ -14,16 +14,17 @@ import { MatButtonModule } from '@angular/material/button';
   imports: [
     CommonModule,
     RouterModule,
-    MatSidenavModule,
     MatToolbarModule,
     MatIconModule,
-    MatListModule,
-    MatButtonModule
+    MatButtonModule,
+
+    // the  PrimeNG Sidebar is applied here
+    SidebarModule
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  opened = true;                
-  toggle() { this.opened = !this.opened; }
+  title = 'skincare-project';
+  sidebarVisible: boolean = false;
 }

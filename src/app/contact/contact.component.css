@@ -1,0 +1,7 @@
+
+
+:host {
+  display: block;
+  margin-top: 80px; /* pushes content below fixed toolbar */
+  padding: 20px;
+}

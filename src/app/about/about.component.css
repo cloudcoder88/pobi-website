@@ -25,3 +25,9 @@
   justify-content: space-around; /* or space-between, center, etc. */
   gap: 20px; /* adjust the gap size as needed */
 }
+
+:host {
+  display: block;
+  margin-top: 80px; /* pushes content below fixed toolbar */
+  padding: 20px;
+}

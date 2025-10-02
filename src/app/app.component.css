@@ -1,28 +1,38 @@
-/* src/app/app.component.css */
-.sidenav-container {
-  height: 100vh;
+.sidebar-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-.app-sidenav {
-  width: 220px;
+.sidebar-links li {
+  margin: 15px 0;
 }
 
-.topbar {
-  position: sticky;
+.sidebar-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  display: block;
+  padding: 8px;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.sidebar-links a:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+ .toolbar {
+  position: fixed;
   top: 0;
-  z-index: 10;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
 }
 
-.toolbar-title {
-  margin-left: 12px;
-  font-weight: 600;
+
+router-outlet {
+  display: block;
 }
 
-.content {
-  padding: 16px;
-}
 
-/* small screens: overlay sidenav */
-@media (max-width: 800px) {
-  .app-sidenav { width: 70%; }
-}
