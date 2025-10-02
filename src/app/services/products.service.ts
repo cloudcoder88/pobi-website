@@ -147,6 +147,25 @@ export class ProductsService {
       image:'',
       description:''
      },
+
+     {
+      id:16,
+      name:'Necessaire The Conditioner 250ml',
+      price:58000,
+      rating:5,
+      image:'https://essentialshub.com/wp-content/uploads/2025/09/imgi_25_s2608727-main-zoom.jpg',
+      description:'The Conditioner is a daily conditioning treatment for scalp and hair'
+
+     },
+
+     {
+      id:17,
+      name:'Foamie Shampoo Bar – Raspberry for Coloured Hair',
+      price:7800,
+      rating:4,
+      image:'https://essentialshub.com/wp-content/uploads/2023/11/Foamie-Shampoo-Bar-Raspberry-for-Coloured-Hair.jpg',
+      description:'Foamie Shampoo Bar – Raspberry for Coloured Hair is a solid shampoo bar designed to gently cleanse and nourish colored hair.'
+     }
      
  ]};
 

@@ -36,6 +36,8 @@ export class ProductsComponent {
     { name:'Prequel Skin Multi-Acid Milk AHA Peel',price:48000,rating:5,image:'https://prequelskin.com/cdn/shop/files/1-PRQL_PDP_Product_Multi-AcidMilk_072025_CapOn.jpg?v=1753227404&width=3000',description:'Prequel Skin Multi-Acid Milk AHA Peel is a dermatologist-formulated, milky resurfacing treatment that delivers advanced exfoliation without compromising your skin barrier'},
     { name:'La Roche-Posay Toleriane Hydrating Gentle Cleanser 200ml', price:31000,rating:5, image:'https://essentialshub.com/wp-content/uploads/2023/11/IMG_4175.webp', description:' Toleriane Hydrating Gentle Cleanser is a daily face wash for normal to dry, sensitive skin.'},
     { name:'Anua Azelaic 10 Hyaluron Redness Soothing Pad', price:26000,rating:5,image:'https://anua.global/cdn/shop/files/anua-us-toner-90-ea-azelaic-10-hyaluron-redness-soothing-pad-1170826118.png?v=1748645013&width=1000',description:'This toner pad is suitable for sensitive skin, formulated with soothing and hydrating ingredients that help improve the appearance of redness and visibly troubled areas.'},
+    { name:'Necessaire The Conditioner 250ml',price:58000, rating:5,image:'https://essentialshub.com/wp-content/uploads/2025/09/imgi_25_s2608727-main-zoom.jpg',description:'The Conditioner is a daily conditioning treatment for scalp and hair'},
+    { name:'Foamie Shampoo Bar – Raspberry for Coloured Hair',price:7800,rating:4,image:'https://essentialshub.com/wp-content/uploads/2023/11/Foamie-Shampoo-Bar-Raspberry-for-Coloured-Hair.jpg',description:'Foamie Shampoo Bar – Raspberry for Coloured Hair is a solid shampoo bar designed to gently cleanse and nourish colored hair.'}
     ];
 
   first: number = 0;
