@@ -1,9 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
 
-/* i used the  prebuilt pink/bluegrey theme for quick styling */
+/* i used the  prebuilt pink/bluegrey theme for quick styling 
+i imported primeicons for icons and aos for animations on scroll
+*/
 @import "@angular/material/prebuilt-themes/pink-bluegrey.css";
 
 @import "primeicons/primeicons.css";
+
+@import "aos/dist/aos.css";
 
 /* your custom styles */
 body {
