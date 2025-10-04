@@ -165,8 +165,79 @@ export class ProductsService {
       rating:4,
       image:'https://essentialshub.com/wp-content/uploads/2023/11/Foamie-Shampoo-Bar-Raspberry-for-Coloured-Hair.jpg',
       description:'Foamie Shampoo Bar – Raspberry for Coloured Hair is a solid shampoo bar designed to gently cleanse and nourish colored hair.'
-     }
+     },
+
+     {
+      id:18,
+      name:'',
+      price:4,
+      rating:4,
+      image:'',
+      description:''
+     },
+
+     {
+      id:19,
+      name:'',
+      price:2,
+      rating:4,
+      image:'',
+      description:''
+     },
      
+     {
+      id:20,
+      name:'',
+      price:1,
+      rating:3,
+      image:'',
+      description:'',
+     },
+
+     {
+      id:21,
+      name:'',
+      price:2,
+      rating:4,
+      image:'',
+      description:'',
+     },
+
+     {
+      id:22,
+      name:'',
+      price:2,
+      rating:3,
+      image:'',
+      description:'',
+     },
+
+     {
+      id:23,
+      name:'',
+      price:2,
+      rating:2,
+      image:'',
+      description:'',
+     },
+
+     {
+      id:24,
+      name:'',
+      price:3,
+      rating:3,
+      image:'',
+      description:'',
+     },
+
+     {
+      id:25,
+      name:'',
+      price:3,
+      rating:3,
+      image:'',
+      description:'',
+     }
  ]};
 
   
