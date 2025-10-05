@@ -144,8 +144,8 @@ export class ProductsService {
       name:'CosRx The Alpha Arbutin Discoloration Care Hydrogel Sheet Mask',
       price:7000,
       rating:5,
-      image:'',
-      description:''
+      image:'https://beautybydaz.com/wp-content/uploads/2025/08/cosrx-srbutin-sheet-1.jpg',
+      description:'it helps reduce the appearance of blemishes and hyperpigmentation, revealing a clearer, more even-toned, and radiant complexion'
      },
 
      {
