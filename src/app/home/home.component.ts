@@ -13,6 +13,7 @@ export class HomeComponent implements AfterViewInit {
   ngAfterViewInit(): void {
     const options = {
       strings: [
+        "Welcome To Pobi Skincare",
         "Glow with Confidence ✨",
         "Nourish Your Skin 💧",
         "Be Your Radiant Self 🌸"
