@@ -1,1 +1,35 @@
-<p>checkout works!</p>
+
+
+<div class="checkout-container" *ngIf="cartItems.length > 0; else emptyCart">
+  <h2>Checkout</h2>
+
+  <div class="cart-items">
+    <div class="cart-item" *ngFor="let item of cartItems">
+      <img [src]="item.image" alt="{{ item.name }}">
+      <div class="item-details">
+        <h3>{{ item.name }}</h3>
+        <p>₦{{ item.price | number }}</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="checkout-summary">
+    <h3>Total: ₦{{ totalPrice | number }}</h3>
+    <button mat-raised-button color="primary" (click)="checkoutWhatsApp()">
+      Checkout on WhatsApp
+    </button>
+    <button mat-raised-button color="warn" (click)="clearCart()">
+      Clear Cart
+    </button>
+  </div>
+</div>
+
+<ng-template #emptyCart>
+  <div class="empty-message">
+    <h3>Your cart is empty 🛒</h3>
+    <a routerLink="/products">
+      <button mat-raised-button color="primary">Shop Now</button>
+    </a>
+  </div>
+</ng-template>
+
