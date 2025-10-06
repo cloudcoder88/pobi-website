@@ -47,7 +47,7 @@ export class ProductsComponent {
   first: number = 0;
   rows: number = 6;
 
-  constructor(private CartService: CartService, private dialog: MatDialog) {
+  constructor(public CartService: CartService, private dialog: MatDialog) {
     this.setRowsBasedOnScreen();
   }
 
