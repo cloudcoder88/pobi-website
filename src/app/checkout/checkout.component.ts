@@ -15,7 +15,7 @@ export class CheckoutComponent {
   total = 0;
 
   // 🔹 Add your WhatsApp number here
-  whatsappNumber: string = '2349012345678'; // Replace with your business number (no "+" sign)
+  whatsappNumber: string = '2348147399481'; // Replace with your business number (no "+" sign)
 
   constructor(public cartService: CartService) {}
 
