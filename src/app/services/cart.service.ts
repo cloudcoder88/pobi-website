@@ -17,6 +17,7 @@ export class CartService {
 
   clearCart() {
     this.cart = [];
+    return this.cart;
   }
 
   getTotalPrice(): number {

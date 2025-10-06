@@ -1,37 +1,52 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';
-import { MatButtonModule } from '@angular/material/button';
 import { CartService } from '../services/cart.service';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-checkout',
   standalone: true,
-  imports: [CommonModule, RouterModule, MatButtonModule],
+  imports: [CommonModule, RouterModule],
   templateUrl: './checkout.component.html',
   styleUrls: ['./checkout.component.css']
 })
 export class CheckoutComponent {
   cartItems: any[] = [];
-  totalPrice: number = 0;
+  total = 0;
 
-  constructor(private cartService: CartService) {}
+  // 🔹 Add your WhatsApp number here
+  whatsappNumber: string = '2349012345678'; // Replace with your business number (no "+" sign)
+
+  constructor(public cartService: CartService) {}
 
   ngOnInit() {
     this.cartItems = this.cartService.getCart();
-    this.totalPrice = this.cartService.getTotalPrice();
+    this.calculateTotal();
+  }
+
+  calculateTotal() {
+    this.total = this.cartItems.reduce((sum, item) => sum + item.price, 0);
+  }
+
+  checkoutViaWhatsApp() {
+    if (this.cartItems.length === 0) {
+      alert('Your cart is empty!');
+      return;
+    }
+
+    const message = this.cartItems
+      .map(item => `🛍️ ${item.name} - ₦${item.price}`)
+      .join('%0A');
+
+    const totalMessage = `%0A💰 *Total:* ₦${this.total}`;
+    const finalMessage = `Hello! I'm interested in purchasing the following items:%0A${message}${totalMessage}`;
+    const whatsappURL = `https://wa.me/${this.whatsappNumber}?text=${finalMessage}`;
+
+    window.open(whatsappURL, '_blank');
   }
 
   clearCart() {
-    this.cartService.clearCart();
-    this.cartItems = [];
-    this.totalPrice = 0;
-  }
-
-  checkoutWhatsApp() {
-    const message = this.cartService.generateWhatsAppMessage();
-    const phoneNumber = '2348147399481'; // put your phone number here
-    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
-    window.open(whatsappUrl, '_blank');
+    this.cartItems = this.cartService.clearCart();
+    this.total = 0;
   }
 }
