@@ -1,5 +1,3 @@
-
-
 import { Injectable } from '@angular/core';
 
 @Injectable({
@@ -10,7 +8,7 @@ export class CartService {
 
   addToCart(product: any) {
     this.cart.push(product);
-    console.log('Cart:', this.cart);
+    console.log('Added to cart:', product);
   }
 
   getCart() {
@@ -19,24 +17,21 @@ export class CartService {
 
   clearCart() {
     this.cart = [];
-    return this.cart;
   }
 
   getTotalPrice(): number {
-    return this.cart.reduce((total, item) => total + item.price, 0);
+    return this.cart.reduce((sum, item) => sum + item.price, 0);
   }
 
   generateWhatsAppMessage(): string {
-    if (this.cart.length === 0) {
-      return 'Hello, I’m interested in buying some items from your store.';
-    }
-
-    let message = 'Hello, I’m interested in purchasing the following items:%0A%0A';
+    if (this.cart.length === 0) return encodeURIComponent('My cart is empty.');
+    
+    let message = 'Hello, I am interested in purchasing the following items:%0A%0A';
     this.cart.forEach((item, index) => {
-      message += `${index + 1}. ${item.name} - ₦${item.price.toLocaleString()}%0A`;
+      message += `${index + 1}. ${item.name} - ₦${item.price}%0A`;
     });
-
-    message += `%0ATotal: ₦${this.getTotalPrice().toLocaleString()}%0A%0AThank you!`;
-    return message;
+    message += `%0ATotal: ₦${this.getTotalPrice()}%0A%0AThank you!`;
+    
+    return encodeURIComponent(message);
   }
 }

@@ -7,3 +7,25 @@
 .product-card {
   cursor: pointer;
 }
+
+
+
+.floating-checkout {
+  position: fixed;
+  bottom: 30px;
+  right: 25px;
+  background-color: #1976d2;
+  color: white;
+  border: none;
+  padding: 14px 25px;
+  border-radius: 30px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  cursor: pointer;
+  font-weight: 600;
+  z-index: 999;
+  transition: all 0.3s ease;
+}
+
+.floating-checkout:hover {
+  background-color: #0d47a1;
+}

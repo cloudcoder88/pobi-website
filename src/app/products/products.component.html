@@ -12,6 +12,16 @@
   </mat-card>
 </div>
 
+<!--Floating checkout button settings-->
+<button 
+  *ngIf="CartService.getCart().length > 0" 
+  class="floating-checkout" 
+  routerLink="/checkout">
+  Go to Checkout
+</button>
+
+
+
 <!-- paginator settings below -->
 <p-paginator
   [rows]="rows"

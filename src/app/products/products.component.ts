@@ -8,6 +8,7 @@ import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { MatButtonModule } from '@angular/material/button';
 import { CartService } from '../services/cart.service';
 import { ProductDialogComponent } from '../product-dialog/product-dialog.component';
+ 
 
 @Component({
   selector: 'app-products',
