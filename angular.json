@@ -20,6 +20,8 @@
               "zone.js"
             ],
             "tsConfig": "tsconfig.app.json",
+            "allowedCommonJsDependencies": ["aos"],
+          
             "assets": [
               {
                 "glob": "**/*",
