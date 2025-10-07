@@ -5,3 +5,70 @@
   margin-top: 80px; /* pushes content below fixed toolbar */
   padding: 20px;
 }
+
+
+
+
+.reviews-section {
+  text-align: center;
+  padding: 60px 20px;
+  background: #fff8f9;
+  overflow: hidden;
+}
+
+.reviews-section h2 {
+  font-size: 28px;
+  color: #e91e63;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+}
+
+.reviews-wrapper {
+  height: 400px; /* visible area */
+  overflow: hidden;
+  position: relative;
+}
+
+.reviews-carousel {
+  display: flex;
+  flex-direction: column;
+  animation: scrollUp 30s linear infinite;
+}
+
+.review {
+  margin: 15px auto;
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.review img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  object-fit: cover;
+}
+
+.review-text {
+  font-style: italic;
+  font-size: 15px;
+  color: #444;
+}
+
+.review h4 {
+  margin-top: 8px;
+  color: #e91e63;
+}
+
+/* Animation Loop */
+@keyframes scrollUp {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
