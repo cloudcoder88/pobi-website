@@ -2,6 +2,7 @@
   "name": "skincare-project",
   "version": "0.0.0",
   "scripts": {
+    "deploy":"ng build --configuration production --base-href \"https://cloudcoder88.github.io/pobi-website/\" --no-inline-fonts && npx angular-cli-ghpages --dir=dist/skincare-project",
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
