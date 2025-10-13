@@ -2,8 +2,8 @@
   "name": "skincare-project",
   "version": "0.0.0",
   "scripts": {
-    "deploy": "npm run build && npx angular-cli-ghpages --dir=dist/skincare-project && npm run postdeploy",
-  "postdeploy": "copy dist\\skincare-project\\index.html dist\\skincare-project\\404.html",
+    "deploy": "npm run build && npx angular-cli-ghpages --dir=dist/skincare-project/browser && npm run postdeploy",
+  "postdeploy": "copy dist\\skincare-project\\browser\\index.html dist\\skincare-project\\browser\\404.html",
     "start": "ng serve",
     "build": "ng build --configuration production --base-href https://cloudcoder88.github.io/pobi-website/",
     "watch": "ng build --watch --configuration development",
