@@ -9,7 +9,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { MatButtonModule } from '@angular/material/button';
-
+import { provideHttpClient } from '@angular/common/http';
 import { routes } from './app.routes';
 
 export const appConfig: ApplicationConfig = {
@@ -21,7 +21,7 @@ export const appConfig: ApplicationConfig = {
         preset: Lara
       }
     }),
-    
+    provideHttpClient(),
     importProvidersFrom(
       MatSidenavModule,
       MatToolbarModule,
