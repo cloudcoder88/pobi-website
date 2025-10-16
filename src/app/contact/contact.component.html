@@ -1,2 +1,67 @@
 
-<p>contact works!</p>
+<section class="contact-section">
+    <h2>Contact Us</h2>
+
+    <!-- [ngModel] connects HTML to the typescript variable name ='
+     is required for angular to tract input'-->
+
+<!-- Hook up your angular forms-->
+
+<form class="contact-form" (ngSubmit)="onSubmit()" #f="ngForm">
+    <div class="form-group">
+        <label for="name"> Full Name</label>
+        <input
+        type="text"
+        id="name"
+        name="fullName"
+        [(ngModel)]="contact.fullName"
+        placeholder="Your Full Name Here"
+        required
+        />
+    </div>
+
+    <div class="form-group">
+        <label for="email">Email Address</label>
+        <input
+        type="email"
+        id="email"
+        name="email"
+        [(ngModel)]="contact.email"
+        placeholder="yourname@example.com"
+        required
+        />
+    </div>
+
+    <div class="form-group">
+        <label for ="phone"> Your Phone N umber</label>
+        <input
+        type="tel"
+        id="phone"
+        name="phone"
+        [(ngModel)]="contact.phone"
+        placeholder=" e.g. +234567892345"
+        required
+        />
+        </div>
+
+        <div class="form-group">
+            <label for="message"> Your Messsage</label>
+            <textarea
+                id="message"
+                name="message"
+                [(ngModel)]="contact.message"
+                rows="5"
+                placeholder="Type Your Messsage here ...."
+                required>
+            </textarea>
+        </div>
+
+        <button type="submit" [disabled]="isLoading">
+            <span *ngIf="!isLoading"> Send Message To The Vendor</span>
+            <span *ngIf="isLoading" class="spinner"></span>
+        </button>
+
+
+
+
+

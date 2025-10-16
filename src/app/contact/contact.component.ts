@@ -24,11 +24,17 @@ export class ContactComponent {
   onSubmit(){
     this.isLoading=true;
     this.http.post('',this.contact).subscribe({
-      next:() =>{
+      next:(res) =>{
         alert('Message Sent Sucessfully !');
-        this.contact = {fullName:'',email:'',message:'',phone:'',}
+        this.contact = {fullName:'',email:'',phone:'',message:''};
+        this.isLoading=false; //stops the spinner
+      },
+      error:(err) => {
+        console.error('Error Sending Messages:', err);
+        alert('Something Went Wrong.Please try again! .');
+        this.isLoading=false; //stops the spinner
       }
-    })
+    });
   }
 
 
