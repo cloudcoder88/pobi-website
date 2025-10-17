@@ -7,3 +7,103 @@
 }
 
 
+/* the content below is the stylesheet for the contact-us page*/
+
+.contact-section{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #f9f9;
+  padding:20px;
+  box-sizing: border-box;
+}
+
+
+.contact-form{
+  background: #fff;
+  padding: 25px 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12 px rgba(0, 0, 0, 0.1);
+  width:100%;
+  max-width: 450px;
+  margin: 0 auto; /*keeps it centered*/
+  box-sizing: border-box;
+}
+
+
+/*mobile fix */
+
+@media (max-width:600px){
+  .contact-form{
+    padding: 20px;
+    width: 100%; /*take full width*/
+    max-width:95%;/*small margin on sides*/
+  }
+  .contact-section{
+    padding: 15px;
+  }
+}
+
+
+.contact-form input,
+.contact-form textarea{
+  width: 100%;
+  padding: 12 px 15px;
+  margin-top:8px ;
+  margin-bottom: 18px;
+  border:1px solid #ccc
+  border-radius:8px;
+ font-size: 14px;
+  outline: none;
+  transition:border-color 0.3s ease;
+  box-sizing:border-box;
+}
+
+.contact-form input ::placeholder,
+.contact-form textarea ::placeholder{
+  color: 999px;;  /*soft gray*/
+  font-style: italic;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus{
+  border-color: #2196f3;
+}
+
+
+button{
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+  background: #2196f3;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover{
+  background: #1769aa;
+  transform: scale(1.05);
+}
+
+.spinner{
+  width: 18px;
+  height: 18px;
+  border: 3px solid #2196f3;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  margin: 8px;
+}
+
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+  
+}
