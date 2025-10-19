@@ -72,3 +72,9 @@
     transform: translateY(-50%);
   }
 }
+
+small {
+  color: #333; /* darker gray */
+  text-shadow: 0 0 2px #fff; /* subtle white text shadow */
+  font-size: 12px;
+}
