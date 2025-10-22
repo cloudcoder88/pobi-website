@@ -4,6 +4,7 @@
   "scripts": {
     "deploy": "npm run build && npx angular-cli-ghpages --dir=dist/skincare-project/browser && npm run postdeploy",
   "postdeploy": "copy dist\\skincare-project\\browser\\index.html dist\\skincare-project\\browser\\404.html",
+   "build:cf": "ng build --output-path dist/skincare-project/browser --configuration production",
     "start": "ng serve",
     "build": "ng build --configuration production --base-href https://cloudcoder88.github.io/pobi-website/",
     "watch": "ng build --watch --configuration development",
