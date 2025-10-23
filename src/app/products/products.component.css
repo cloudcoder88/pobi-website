@@ -29,3 +29,28 @@
 .floating-checkout:hover {
   background-color: #0d47a1;
 }
+
+
+
+/* 🔹 Subtle pulse effect for mobile visibility */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(0, 123, 255, 0.4);
+  }
+  70% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 10px rgba(0, 123, 255, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(0, 123, 255, 0);
+  }
+}
+
+/* 🔹 Apply animation only for small screens (mobile) */
+@media (max-width: 768px) {
+  .floating-checkout {
+    animation: pulse 2s infinite;
+  }
+}
