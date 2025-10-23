@@ -48,9 +48,14 @@
   }
 }
 
-/* 🔹 Apply animation only for small screens (mobile) */
+/* 🔹 Apply animation only for small screens (mobile) - MORE SPECIFIC */
 @media (max-width: 768px) {
-  .floating-checkout {
-    animation: pulse 2s infinite;
+  button.floating-checkout {
+    animation: pulse 2s infinite !important;
+  }
+  
+  /* If using wrapper div */
+  .floating-checkout-wrapper .floating-checkout {
+    animation: pulse 2s infinite !important;
   }
 }
