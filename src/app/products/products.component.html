@@ -17,9 +17,8 @@
   *ngIf="CartService.getCart().length > 0" 
   class="floating-checkout" 
   routerLink="/checkout">
-  Go to Checkout
+  Go to Checkout ({{ CartService.getCart().length }})
 </button>
-
 
 
 <!-- paginator settings below -->

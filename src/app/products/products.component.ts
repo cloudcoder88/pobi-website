@@ -8,6 +8,7 @@ import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { MatButtonModule } from '@angular/material/button';
 import { CartService } from '../services/cart.service';
 import { ProductDialogComponent } from '../product-dialog/product-dialog.component';
+import { Router, RouterModule} from '@angular/router';
  
 
 @Component({
@@ -20,7 +21,8 @@ import { ProductDialogComponent } from '../product-dialog/product-dialog.compone
     PaginatorModule,
     MatCardModule,
     MatDialogModule,
-    MatButtonModule
+    MatButtonModule,
+    RouterModule
   ],
   templateUrl: './products.component.html',
   styleUrls: ['./products.component.css']
@@ -47,7 +49,7 @@ export class ProductsComponent {
   first: number = 0;
   rows: number = 6;
 
-  constructor(public CartService: CartService, private dialog: MatDialog) {
+  constructor(public CartService: CartService, private dialog: MatDialog,private router: Router) {
     this.setRowsBasedOnScreen();
   }
 
@@ -76,6 +78,18 @@ export class ProductsComponent {
     this.first = event.first;
     this.rows = event.rows;
   }
+
+
+  /** check out logic */
+
+  // Add this method:
+
+   goToCheckout(event: Event) {
+    event.stopPropagation(); // prevent accidental product clicks
+    this.router.navigate(['/checkout']); // ✅ route to checkout page
+   }
+
+
 
   /** Open modal with product details */
   openDialog(product: any) {
