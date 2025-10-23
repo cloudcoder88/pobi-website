@@ -36,7 +36,7 @@ serverMessage ='';// these properties are used to tract server responses
     this.isLoading =true;
     this.serverMessage ='';
     this.isSucess =false;
-    this.http.post('',this.contact).subscribe({
+    this.http.post('https://skincare-backend-vjxv.onrender.com/contact',this.contact).subscribe({
       next:(res) => {
         //success -use the custom messages instead of the javascript alert  
         this.serverMessage ='✅ Message sent successfully!';
