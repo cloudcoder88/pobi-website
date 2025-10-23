@@ -1,18 +1,13 @@
-
 <section class="contact-section">
-    <h2>Contact Us</h2>
+  <h2>Contact Us</h2>
 
-    <!-- [ngModel] connects HTML to the typescript variable name ='
-     is required for angular to tract input'-->
+  <!-- FORM SHOULD WRAP ALL FIELDS -->
+  <form class="contact-form" (ngSubmit)="onSubmit(f)" #f="ngForm">
 
-<!-- Hook up your angular forms-->
-<!-- Fixed the form reference and added proper validation below-->
-
-<!-- Full Name Field  below-->
-<form class="contact-form" (ngSubmit)="onSubmit(f)" #f="ngForm">
+    <!-- Full Name Field -->
     <div class="form-group">
-        <label for="name"> Full Name *</label>
-        <input
+      <label for="name">Full Name *</label>
+      <input
         type="text"
         id="name"
         name="fullName"
@@ -20,20 +15,18 @@
         #fullName="ngModel"
         placeholder="Your Full Name Here"
         required
-        [class.error]="(fullName.invalid && (fullName.dirty || fullName.touched))  ||(submitted && fullName.invalid)"
-        />
-        <!-- validation message-->
-    <div *ngIf="(fullName.invalid && (fullName.dirty || fullName.touched)) || (submitted && fullName.invalid)"
-    class="error-message">
-    Full name is required
-    </div>
+        [class.error]="(fullName.invalid && (fullName.dirty || fullName.touched)) || (submitted && fullName.invalid)"
+      />
+      <div *ngIf="(fullName.invalid && (fullName.dirty || fullName.touched)) || (submitted && fullName.invalid)"
+        class="error-message">
+        Full name is required
+      </div>
     </div>
 
-
-<!-- Email Address Field  below-->
+    <!-- Email Address Field -->
     <div class="form-group">
-        <label for="email">Email Address *</label>
-        <input
+      <label for="email">Email Address *</label>
+      <input
         type="email"
         id="email"
         name="email"
@@ -43,67 +36,58 @@
         required
         email
         [class.error]="(emailField.invalid && (emailField.dirty || emailField.touched)) || (submitted && emailField.invalid)"
-        />
-        <!-- validation message-->
-    <div *ngIf="(emailField.invalid && (emailField.dirty || emailField.touched)) || (submitted && emailField.invalid)" 
-     class="error-message">
-     <div *ngIf="emailField.errors?.['required']">Valid email is required</div>
-    <div *ngIf="emailField.errors?.['email']">Invalid email format</div>
+      />
+      <div *ngIf="(emailField.invalid && (emailField.dirty || emailField.touched)) || (submitted && emailField.invalid)" 
+        class="error-message">
+        <div *ngIf="emailField.errors?.['required']">Valid email is required</div>
+        <div *ngIf="emailField.errors?.['email']">Invalid email format</div>
+      </div>
     </div>
-    </div>
 
-
-
-    <!-- Phone Number Field below-->
+    <!-- Phone Number Field -->
     <div class="form-group">
-        <label for ="phone"> Your Phone Number</label>
-        <input
+      <label for="phone">Your Phone Number</label>
+      <input
         type="tel"
         id="phone"
         name="phone"
         [(ngModel)]="contact.phone"
-        #phoneField = "ngModel"
-        placeholder=" e.g. +234567892345"
+        #phoneField="ngModel"
+        placeholder="e.g. +234567892345"
+      />
+    </div>
+
+    <!-- Message Field -->
+    <div class="form-group">
+      <label for="message">Your Message *</label>
+      <textarea
+        id="message"
+        name="message"
+        [(ngModel)]="contact.message"
+        #messageField="ngModel"
+        rows="5"
+        placeholder="Type Your Message here..."
         required
-        />
-        </div>
+        minlength="10"
+        [class.error]="(messageField.invalid && (messageField.dirty || messageField.touched)) || (submitted && messageField.invalid)"
+      ></textarea>
+      <div *ngIf="(messageField.invalid && (messageField.dirty || messageField.touched)) || (submitted && messageField.invalid)" class="error-message">
+        <div *ngIf="messageField.errors?.['required']">Message is required</div>
+        <div *ngIf="messageField.errors?.['minlength']">Message must be at least 10 characters long</div>
+      </div>
+    </div>
 
+    <!-- Submit Button -->
+    <button type="submit" [disabled]="isLoading">
+      <span *ngIf="!isLoading">Send Message To The Vendor</span>
+      <span *ngIf="isLoading">Sending...</span>
+    </button>
 
-        <!-- Message Field below-->
-        <div class="form-group">
-            <label for="message"> Your Messsage *</label>
-            <textarea
-                id="message"
-                name="message"
-                [(ngModel)]="contact.message"
-                #messageField="ngModel"
-                rows="5"
-                placeholder="Type Your Messsage here ...."
-                required
-                minlength="10"
-                [class.error]="(messageField.invalid && (messageField.dirty || messageField.touched)) || (submitted && messageField.invalid)"
-            ></textarea>
-            <!-- validation message-->
-             <div  *ngIf="(messageField.invalid && (messageField.dirty || messageField.touched)) || (submitted && messageField.invalid)" class="error-message">
-                <div *ngIf="messageField.errors?.['required']">Message is required</div>
-                <div *ngIf="messageField.errors?.['minlength']">Message must be at least 10 characters long</div>
-             </div>
-        </div>
+    <!-- Server Response Messages -->
+    <div *ngIf="serverMessage" 
+         [class]="isSucess ? 'success-message' : 'error-message'">
+      {{ serverMessage }}
+    </div>
 
-        <!-- Submit Button below-->
-        <button type="submit" [disabled]="isLoading">
-            <span *ngIf="!isLoading"> Send Message To The Vendor</span>
-            <span *ngIf="isLoading">Sending</span>
-        </button>
-
-
- <!-- success/Error Messages below-->       
-
- <!-- Server Response Messages-->
-<div *ngIf="serverMessage" 
-     [class]="isSucess ? 'success-message' : 'error-message'">
-  {{ serverMessage }}
-</div>
-
-
-
+  </form> <!-- CLOSING FORM TAG -->
+</section>
