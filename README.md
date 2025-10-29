@@ -1,59 +1,66 @@
-# SkincareProject
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.17.
+## SKINCARE-PROJECT
 
-## Development server
+this is a simple e-commerce website that sells skincare products,checkvia whatsapp
 
-To start a local development server, run:
+## TECH STACK
 
-```bash
-ng serve
-```
+package manager:node js,node version:LTS
+styling:primeng ,CSS
+language:typescript
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## DEPLOYMENT
 
-## Code scaffolding
+Frontend =Github pages
+Backend =Render
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## ContactFormFlow/ BACKEND README
 
-```bash
-ng generate component component-name
-```
+user submits form on angular frontend
+Angular sends request to backend endpoint
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## Overview
 
-```bash
-ng generate --help
-```
+The backend server was built with Node.js and Express.
+it uses body-parser and JSON parsing, cors for Cross- Origin support,
+it uses Resend for seding emails.The server is hosted on Render.
 
-## Building
+## Intergration Details
 
-To build the project run:
+- **Method:** POST
+// - **Request Body:**
+//   {
+//     "fullName": string,
+//     "email": string,
+//     "phone": string,
+//     "message": string
+//   }
+// - **Response:** JSON success or error message
 
-```bash
-ng build
-```
+## Key Dependencies
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+- express: Web framework
+// - body-parser: JSON request parsing
+// - cors: Cross-Origin Resource Sharing
+// - resend: Email sending via Resend API
+// - dotenv: Environment variables (optional)
 
-## Running unit tests
+## HOW TO RUN LOCALLY
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+ 1. Clone the repo.
+ 2. Run: npm install
+ 3. Set environment variables ( RESEND_API_KEY, PORT).
+ 4. Start server: npm start
+ 5. Server runs on PORT (default 5000).
 
-```bash
-ng test
-```
+## Deployment
 
-## Running end-to-end tests
+- Hosted on **Render**.
+- Auto-deploys from the main branch on push.
 
-For end-to-end (e2e) testing, run:
+## HOW TO TEST ON POSTMAN
 
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs, i used css in this project.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+// curl -X POST https://****-backend-dxa1.onrender.com/contact \
+//   -H "Content-Type: application/json" \
+//   -d '{"fullName":"John Doe","email":"john@ example.com","phone":"1234567890","message":"Hello"}'
+//  test the backend url on post man and check your email
