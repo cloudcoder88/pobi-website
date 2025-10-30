@@ -37,7 +37,7 @@ export class CheckoutComponent {
     const message = this.cartItems
       .map(item => `🛍️ ${item.name} - ₦${item.price}`)
       .join('%0A');
-
+// checkout message which is pre-loaded when the user hits "checkout via whatsapp",products,price and text 
     const totalMessage = `%0A💰 *Total:* ₦${this.total}`;
     const finalMessage = `Hello! I'm interested in purchasing the following items:%0A${message}${totalMessage}`;
     const whatsappURL = `https://wa.me/${this.whatsappNumber}?text=${finalMessage}`;
@@ -45,6 +45,7 @@ export class CheckoutComponent {
     window.open(whatsappURL, '_blank');
   }
 
+// clears the cart of selected items
   clearCart() {
     this.cartItems = this.cartService.clearCart();
     this.total = 0;
