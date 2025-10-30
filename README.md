@@ -60,7 +60,7 @@ it uses Resend for seding emails.The server is hosted on Render.
 
 ## HOW TO TEST ON POSTMAN
 
-// curl -X POST https://****-backend-dxa1.onrender.com/contact \
+// curl -X POST https://*********onrender.com/contact \
 //   -H "Content-Type: application/json" \
 //   -d '{"fullName":"John Doe","email":"john@ example.com","phone":"1234567890","message":"Hello"}'
 //  test the backend url on post man and check your email
