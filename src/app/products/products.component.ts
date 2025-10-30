@@ -82,11 +82,11 @@ export class ProductsComponent {
 
   /** check out logic */
 
-  // Add this method:
+ 
 
    goToCheckout(event: Event) {
     event.stopPropagation(); // prevent accidental product clicks
-    this.router.navigate(['/checkout']); // ✅ route to checkout page
+    this.router.navigate(['/checkout']); // correct route to checkout page
    }
 
 
