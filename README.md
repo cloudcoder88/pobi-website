@@ -1,5 +1,5 @@
 
-## SKINCARE-PROJECT
+# Skincare-project
 
 this is a simple e-commerce website that sells skincare products,checkvia whatsapp
 
