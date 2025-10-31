@@ -1,7 +1,7 @@
 
 # Skincare-project
 
-this is a simple e-commerce website that sells skincare products, the checout is via whatsapp to communicate with the local vendor
+this is a simple e-commerce website that sells skincare products, the checkout is via whatsapp to communicate with the local vendor
 
 ## TECH STACK
 
