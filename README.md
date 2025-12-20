@@ -8,11 +8,13 @@ this is a simple e-commerce website that sells skincare products, the checkout i
 package manager:node js,node version:LTS
 styling:primeng ,CSS
 language:typescript
+version control:GITHUB
 
 ## DEPLOYMENT
 
 Frontend =Github pages
 Backend =Render
+Email Server=RESEND
 
 ## ContactFormFlow/ BACKEND README
 
