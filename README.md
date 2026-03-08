@@ -27,6 +27,21 @@ The backend server was built with Node.js and Express.
 it uses body-parser and JSON parsing, cors for Cross- Origin support,
 it uses Resend for seding emails.The server is hosted on Render.
 
+## build(pages/routes)
+
+Home- Hero section
+product-grid/list of skincare products(images,description and prices)
+About-info
+Contact- Whatsapp button,email phone
+
+Product Flow : Each product card has a"ADD TO CART" button,when clicked opens whatsapp chat
+with Pre-filled messages that connects you to the seller
+Whatsapp Integration: Uses router link
+Design: CSS gris for product display on desktop swithc to flexbox(column) for mobile
+with media queries.
+A Floating Whatsapp buton at the buttom right for a quick chat
+Product List with primeNg paginator,Each product has a rating stars
+
 ## Intergration Details
 
 - **Method:** POST
