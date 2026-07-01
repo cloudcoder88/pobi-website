@@ -169,38 +169,38 @@ export class ProductsService {
 
      {
       id:18,
-      name:'',
-      price:4,
-      rating:4,
-      image:'',
-      description:''
+      name:'Dove Exfoliating Body Scrub Kiwi Seeds & Cool Aloe Scent',
+      price:19000,
+      rating:5,
+      image:'https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/04/1657814/1.jpg?2707',
+      description:'Dove Exfoliating Body Scrub Kiwi Seeds & Cool Aloe Scent is a body scrub that gently exfoliates and nourishes the skin, leaving it soft and refreshed.'
      },
 
      {
       id:19,
-      name:'',
-      price:2,
+      name:'Vaseline BlueSeal Baby Gentle Protective Jelly',
+      price:4500,
       rating:4,
-      image:'',
-      description:''
+      image:'https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/79/6531914/1.jpg?4762',
+      description:'Vaseline®Petroleum Jelly Baby soothes nappy rash and chafing and restores soft skin'
      },
      
      {
       id:20,
-      name:'',
-      price:1,
-      rating:3,
-      image:'',
-      description:'',
+      name:'NIVEA Sun UV Sunscreen Face Shine Control Cream SPF 50',
+      price:16000,
+      rating:4,
+      image:'https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/43/4808404/3.jpg?5554',
+      description:'NIVEA Sun UV Sunscreen Face Shine Control Cream SPF 50- 50ML is a Lightweight,non-greasy sunscreen that provides high protection against UVA and UVB rays, helping to prevent sunburn and premature skin aging.'
      },
 
      {
       id:21,
-      name:'',
-      price:2,
-      rating:4,
-      image:'',
-      description:'',
+      name:'Q+A Retinol Facial Serum 30ml',
+      price:13000,
+      rating:5,
+      image:'https://teeka4.com/wp-content/uploads/2025/10/WhatsApp-Image-2024-02-13-at-11.35.38_6d0ef3f4-1024x1024.jpg',
+      description:'This retinol serum is suitable for oily, dry, normal, and combination skin types,and it helps to reduce the apppearance of fine lines,wrinkles,and uneven skin tone,while promoting a smoother and more youthful complexion.',
      },
 
      {
