@@ -45,7 +45,7 @@ export class ProductsService {
       price:7500,
       rating:5,
       image:'assets/images/serum.jpg',
-      description:'',
+      description:'An effective hand sanitizer that kills 99.9% of germs.',
     },
 
     {
