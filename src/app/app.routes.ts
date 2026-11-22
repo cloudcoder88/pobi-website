@@ -5,6 +5,7 @@ import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { ReviewsComponent } from './reviews/reviews.component';
 import { CheckoutComponent } from './checkout/checkout.component';
+import { LoginComponent } from './login/login.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },          // Home
@@ -13,5 +14,6 @@ export const routes: Routes = [
   { path: 'contact', component: ContactComponent },
   { path: 'reviews', component: ReviewsComponent },
   { path: 'checkout', component: CheckoutComponent },
+  {path : 'Login   ', component: LoginComponent},
   { path: '**', redirectTo: '' } // fallback
 ];
