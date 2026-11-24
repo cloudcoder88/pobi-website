@@ -14,6 +14,6 @@ export const routes: Routes = [
   { path: 'contact', component: ContactComponent },
   { path: 'reviews', component: ReviewsComponent },
   { path: 'checkout', component: CheckoutComponent },
-  {path : 'Login   ', component: LoginComponent},
+  { path: 'login', component: LoginComponent },  // i added this line to include the login route
   { path: '**', redirectTo: '' } // fallback
 ];
